@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Playground</title>
+
+    <style>
+        .container {
+
+        display: flex;
+        
+        /* inverte 
+        flex-direction: column; (e etc) */
+
+        /* qubra de linha */
+        flex-wrap: wrap;
+        
+        /* altura minima, deixa sem "vazar" */
+        min-height: 100px;
+
+        /* só usado felx se o display for flex */
+        /* justify-content: flex-end; */
+
+            /* horizontal */
+        justify-content: center;
+
+        /* margin */
+        gap: 5px;
+
+        /* o que faz em vertical*/
+        align-items:center;
+        }
+
+        /* derivados/filhos */
+        .container>* {}
+    </style>
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <h1>Flexbox Playground</h1>
+    </header>
+
+    <div class="container">
+        <span>Lorem.</span>
+        <span>Lorem, ipsum.</span>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+            fuga?</span>
+        <span>Lorem, ipsum dolor.</span>
+    </div>
+
+    <!-- principal -->
+    <main class="container">
+        <!-- sessões -->
+        <section>
+            <h2>Lorem, ipsum dolor</h2>
+            <div>Lorem ipsum dolor sit amet.</div>
+        </section>
+        <section>
+            <h2>Harum, debitis exercitationem</h2>
+            <div>Lorem, ipsum dolor.</div>
+        </section>
+        <section>
+            <h2>Repellat, illum odit</h2>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam aut nesciunt voluptatum cupiditate ex
+                deserunt libero, aliquid odit nobis nulla?</div>
+        </section>
+    </main>
+<!-- rodapé -->
+    <footer>
+        Ermogenes Palacio, 2022.
+    </footer>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf9f9;
+            color: #2f3e46;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 5vw;
+            background: linear-gradient(to bottom, #118ab2 0%, #118ab2 45%, #ffd166 65%, #0077b6 67%);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            white-space: nowrap;
+        }
+
+        h2 {
+            color: #0077b6;
+        }
+
+        footer {
+            color: #118ab2;
+            text-align: right;
+        }
+
+        .container {
+            margin-bottom: 2em;
+            border: 5px solid #0077b6;
+            background-color: #cbf3f0;
+        }
+
+        .container>* {
+            border: 5px solid #ff9f1c;
+            background-color: #f5cac3;
+        }
+    </style>
+</body>
+
+</html>
